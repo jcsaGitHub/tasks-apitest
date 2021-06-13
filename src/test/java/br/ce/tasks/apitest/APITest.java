@@ -27,7 +27,7 @@ public class APITest {
 	@Test
 	public void deveAdicionarTarefaComSucesso() {
 		RestAssured.given()
-			.body("{\"task\":\"Curso\",\"dueDate\":\"2021-06-12\"}")
+			.body("{\"task\":\"Curso\",\"dueDate\":\"2021-06-13\"}")
 			.contentType(ContentType.JSON)
 		.when()
 			.post("/todo")
@@ -39,7 +39,7 @@ public class APITest {
 	@Test
 	public void naoDeveAdicionarTarefaInvalida() {
 		RestAssured.given()
-			.body("{\"task\":\"Curso\",\"dueDate\":\"2021-03-12\"}")
+			.body("{\"task\":\"Curso\",\"dueDate\":\"2021-03-13\"}")
 			.contentType(ContentType.JSON)
 		.when()
 			.post("/todo")
